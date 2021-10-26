@@ -64,4 +64,16 @@ public class MatrixCheckTest {
         char[] expected = {'X', 'Y', 'Z'};
         Assert.assertArrayEquals(expected, result);
     }
+
+    @Test
+    public void whenHasMonoHorizontalFalse() {
+        char[][] input = {
+                {' ', ' ', ' '},
+                {' ', 'X', 'X'},
+                {' ', ' ', ' '},
+        };
+        int row = 1;
+        boolean result = MatrixCheck.monoHorizontal(input, row);
+        Assert.assertFalse(result);
+    }
 }
